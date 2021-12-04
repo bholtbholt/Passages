@@ -1,9 +1,17 @@
 <script lang="ts">
-  import Counter from './Counter.svelte'
+  import { catsCradle } from './catsCradle';
+
+  import Chapter from './Chapter.svelte';
+  import Passage from './Passage.svelte';
 </script>
 
-<main class="max-w-md mx-auto px-3 py-4">
-  <h1 class="text-3xl text-orange-500 text-center mb-5">Hello Typescript!</h1>
-
-  <Counter />
+<main class="max-w-prose mx-auto">
+  {#each catsCradle as { chapter, passages }}
+    <section class="text-xl leading-relaxed">
+      <Chapter>{chapter}</Chapter>
+      {#each passages as passage}
+        <Passage {...passage} />
+      {/each}
+    </section>
+  {/each}
 </main>
