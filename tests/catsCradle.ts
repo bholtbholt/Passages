@@ -1,4 +1,4 @@
-import type { Chapter, Passage } from './types';
+import type { Chapter, Passage } from '../src/types';
 import { nanoid } from 'nanoid/non-secure';
 
 const chapter1: Passage[] = [

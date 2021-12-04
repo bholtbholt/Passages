@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { catsCradle } from './catsCradle';
+  import { catsCradle } from '../tests/catsCradle';
 
   import Chapter from './Chapter.svelte';
   import Passage from './Passage.svelte';
