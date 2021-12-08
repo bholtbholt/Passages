@@ -1,5 +1,4 @@
 import type { Chapter, Passage } from '../src/types';
-import { nanoid } from 'nanoid/non-secure';
 
 const chapter1: Passage[] = [
   'Call me Jonah. My parents did, or nearly did. They called me John.',
@@ -14,7 +13,7 @@ const chapter1: Passage[] = [
   'I would have been a Bokononist then, if there had been anyone to teach me the bittersweet lies of Bokonon. But Bokononism was unknown beyond the gravel beaches and coral knives that ring this little island in the Caribbean Sea, the Republic of San Lorenzo.',
   "We Bokononists believe that humanity is organized into teams, teams that do God's Will without ever discovering what they are doing. Such a team is called a <em>karass</em> by Bokonon, and the instrument, the <em>kan-kan</em>, that brought me into my own particular <em>karass</em> was the book I never finished, the book to be called <em>The Day the World Ended</em>.",
 ].map((passage) => {
-  return { id: nanoid(), html: passage, chapter: 1 };
+  return { html: passage, chapter: 1 };
 });
 
 const chapter2: Passage[] = [
@@ -36,10 +35,17 @@ const chapter2: Passage[] = [
   'So many different people',
   'In the same device',
 ].map((passage) => {
-  return { id: nanoid(), html: passage, chapter: 2 };
+  return { html: passage, chapter: 2 };
+});
+
+const chapter3: Passage[] = [
+  "Nowhere does Bokonon warn against a person's trying to discover the limits of his <em>karass</em> and the nature of the work God Almighty has had it do. Bokonon simply observes that such investigations are bound to be incomplete.",
+].map((passage) => {
+  return { html: passage, chapter: 3 };
 });
 
 export const catsCradle: Chapter[] = [
   { chapter: 1, passages: chapter1 },
   { chapter: 2, passages: chapter2 },
+  { chapter: 3, passages: chapter3 },
 ];
