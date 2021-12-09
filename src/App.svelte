@@ -4,6 +4,7 @@
   import { chapters, passages } from './stores/passages';
   import Chapter from './Chapter.svelte';
   import Passage from './Passage.svelte';
+  import PassageForm from './PassageForm.svelte';
 
   onMount(async () => {
     const response = await fetch('catscradle.json');
@@ -21,4 +22,6 @@
       {/each}
     </section>
   {/each}
+
+  <PassageForm />
 </main>
