@@ -1,6 +1,7 @@
 {
   "extends": "@tsconfig/svelte/tsconfig.json",
   "compilerOptions": {
+    "types": ["node", "jest"],
     "target": "esnext",
     "useDefineForClassFields": true,
     "module": "esnext",
