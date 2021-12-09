@@ -1,9 +1,7 @@
 module.exports = {
-  setupFilesAfterEnv: ['./tests/test-setup.ts'],
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
-  testRegex: '(/tests/.*|(\\.|/)(test|spec))\\.ts$',
-  testPathIgnorePatterns: ['test-setup.ts'],
+  testRegex: '(\\.|/)(test|spec)\\.ts$',
   transform: {
     '^.+\\.svelte$': [
       'svelte-jester',
