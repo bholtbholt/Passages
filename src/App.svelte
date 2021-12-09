@@ -1,23 +1,23 @@
 <script lang="ts">
   import { onMount } from 'svelte';
 
+  import { chapters, passages } from './stores/passages';
   import Chapter from './Chapter.svelte';
   import Passage from './Passage.svelte';
 
-  let chapters = [];
-
   onMount(async () => {
     const response = await fetch('catscradle.json');
-    chapters = await response.json();
+    const data = await response.json();
+    passages.set(data);
   });
 </script>
 
 <main class="max-w-prose mx-auto">
-  {#each chapters as { chapter, passages }}
+  {#each [...$chapters] as [chapter, passages]}
     <section class="text-xl leading-relaxed">
       <Chapter>{chapter}</Chapter>
       {#each passages as passage}
-        <Passage {...passage} />
+        <Passage>{@html passage.html}</Passage>
       {/each}
     </section>
   {/each}
