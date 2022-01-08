@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
 
-  import { chapters, passages } from './stores/passages';
+  import { chapters, passages } from '../stores/passages';
   import Chapter from './Chapter.svelte';
   import Passage from './Passage.svelte';
   import PassageForm from './PassageForm.svelte';

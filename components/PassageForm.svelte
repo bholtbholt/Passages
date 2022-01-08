@@ -1,9 +1,8 @@
 <script lang="ts">
-  import type { Passage } from '../src/types';
-  import { passages, latestChapter } from './stores/passages';
+  import { passages, latestChapter } from '../stores/passages';
   import Chapter from './Chapter.svelte';
 
-  let html;
+  let html: string;
   $: chapter = $latestChapter;
   $: showChapterButton = chapter === $latestChapter;
 
