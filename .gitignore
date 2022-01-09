@@ -3,3 +3,6 @@
 /.vscode/
 .DS_Store
 svelte.sublime-workspace
+.anchor
+target
+**/*.rs.bk
