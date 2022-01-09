@@ -16,6 +16,6 @@
     "allowJs": true,
     "checkJs": true
   },
-  "include": ["components/**/*", "entry/**/*", "stores/**/*"],
+  "include": ["components/**/*", "entry/**/*", "programs/**/*", "stores/**/*"],
   "exclude": ["node_modules/*", "public/*"]
 }

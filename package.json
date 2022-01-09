@@ -3,11 +3,13 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "anchor:test": "anchor test",
     "build": "vite build",
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "dev": "vite",
     "serve": "vite preview",
-    "test": "jest --watch"
+    "test": "jest --watch",
+    "test:solana": "mocha -t 1000000 programs/passages/src/lib.test.js"
   },
   "devDependencies": {
     "@project-serum/anchor": "^0.20.0",

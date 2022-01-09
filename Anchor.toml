@@ -9,4 +9,4 @@ cluster = "localnet"
 wallet = "/Users/brianholt/.config/solana/id.json"
 
 [scripts]
-test = "yarn run mocha -t 1000000 tests/"
+test = "npm run test:solana"
