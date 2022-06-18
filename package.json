@@ -9,7 +9,7 @@
     "dev": "vite",
     "serve": "vite preview",
     "test": "jest --watch",
-    "test:solana": "mocha -t 1000000 programs/passages/src/lib.test.js"
+    "test:solana": "mocha programs/passages/src/lib.test.js"
   },
   "devDependencies": {
     "@project-serum/anchor": "^0.20.0",

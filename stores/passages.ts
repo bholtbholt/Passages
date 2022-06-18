@@ -16,11 +16,9 @@ export const passages = (() => {
 })();
 
 export const chapters = derived(passages, ($passages) => {
-  return $passages.reduce(
-    (chapter, passage) =>
-      chapter.set(passage.chapter, [...(chapter.get(passage.chapter) || []), passage]),
-    new Map(),
-  );
+  return $passages.reduce((chapter, passage) => {
+    return chapter.set(passage.chapter, [...(chapter.get(passage.chapter) || []), passage]);
+  }, new Map());
 });
 
 export const latestChapter = derived(passages, ($passages): number => {

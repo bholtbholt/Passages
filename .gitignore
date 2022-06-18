@@ -6,3 +6,4 @@ svelte.sublime-workspace
 .anchor
 target
 **/*.rs.bk
+test-ledger
